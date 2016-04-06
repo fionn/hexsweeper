@@ -3,6 +3,7 @@
 	<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
 	<meta content='utf-8' http-equiv='encoding'>
 	<head>
+		<script type='text/javascript' src='lib/vector.js'></script>
 		<script type='text/javascript' src='lib/game.js'></script>
 		<script type='text/javascript' src='lib/graphics.js'></script>
 		<script type='text/javascript' src='lib/hex.js'></script>
@@ -12,10 +13,11 @@
 		<script text='text/javascript'>
 			var game=new Game({name:'minesweeper',background:'black'});
 			game.renderer.newLayer('animation',1,true);
-			game.renderer.newLayer('background_stroke',0,false);
 			game.renderer.newLayer('background_fill',0,false);
+			game.renderer.newLayer('background_stroke',0,false);
 			game.renderer.layers['animation'].add(HexMouse,{radius:6});
 			game.renderer.layers['background_stroke'].add(HexBoard,{radius:6});
+			game.renderer.layers['background_fill'].add(HexSelected,{radius:6});
 			game.renderer.layers['background_fill'].add(Minesweeper,{radius:6});
 			game.start();
 		</script>
