@@ -16,13 +16,9 @@
 			game.renderer.newLayer('background_stroke',0,false);
 			game.renderer.newLayer('animation',1,true);
 			game.renderer.layers['animation'].add(HexMouse,{radius:6});
-			game.renderer.layers['animation'].add(Animation,{origin:[-1,-1]});
-			game.renderer.layers['animation'].add(Animation,{origin:[1,1]});
-			game.renderer.layers['animation'].add(Animation,{origin:[1,-1]});
-			game.renderer.layers['animation'].add(Animation,{origin:[-1,1]});
 			game.renderer.layers['background_stroke'].add(HexBoard,{radius:6});
-			game.renderer.layers['background_fill'].add(HexSelected,{radius:6});
-			game.renderer.layers['background_fill'].add(Minesweeper,{radius:6});
+//			game.renderer.layers['background_fill'].add(HexSelected,{radius:6});
+			game.renderer.layers['background_fill'].add(MineSweeper,{radius:6});
 			game.start();
 		</script>
 	</body>
