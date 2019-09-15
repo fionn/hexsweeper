@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hexsweeper/static/css/main.161f3d34.chunk.css",
+    "main.js": "/hexsweeper/static/js/main.280356c6.chunk.js",
+    "main.js.map": "/hexsweeper/static/js/main.280356c6.chunk.js.map",
+    "runtime~main.js": "/hexsweeper/static/js/runtime~main.026ffe0d.js",
+    "runtime~main.js.map": "/hexsweeper/static/js/runtime~main.026ffe0d.js.map",
+    "static/js/2.08e2d9c8.chunk.js": "/hexsweeper/static/js/2.08e2d9c8.chunk.js",
+    "static/js/2.08e2d9c8.chunk.js.map": "/hexsweeper/static/js/2.08e2d9c8.chunk.js.map",
+    "index.html": "/hexsweeper/index.html",
+    "precache-manifest.29628411d381a4d91440c07db0a3b179.js": "/hexsweeper/precache-manifest.29628411d381a4d91440c07db0a3b179.js",
+    "service-worker.js": "/hexsweeper/service-worker.js",
+    "static/css/main.161f3d34.chunk.css.map": "/hexsweeper/static/css/main.161f3d34.chunk.css.map"
+  }
+}
