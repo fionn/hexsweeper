@@ -5,7 +5,7 @@ import {MdMenu, MdHelp, MdHelpOutline, MdFlag, MdFingerprint,MdArrowForward, MdA
 import Chance from 'chance';
 
 function FullScreen(props) {
-    return (<div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
+    return (<div style={{width: '100vw', height: '100vh', overflow: 'hidden', position: "relative"}}>
         {props.children}
     </div>)
 }
@@ -328,7 +328,7 @@ class App extends React.Component {
                         This is a "flagged" cell.
                         You can flag cells by clicking the <span><MdFlag /></span> icon in the bottom left.
                         This will switch to "flag" mode, and any cells you click/tap will be flagged.
-                        You can return to "reveal" mode by clickgin the <span><MdFingerprint /></span> button in the bottom right.
+                        You can return to "reveal" mode by clickgin the <span><MdFingerprint /></span> button also in the bottom left.
                     </div>
                 </Slide>
 
@@ -354,7 +354,7 @@ class App extends React.Component {
                     <div>
                         You can start a new game by clicking the <span><MdAutorenew /></span>, unless
                         you've finished the current game, in which case you will see the <span><MdArrowForward /></span> button.
-                        Either can be located in the center of the bottom of the screen.
+                        Either can be located in the center of the bottom right of the screen.
                     </div>
                 </Slide>
 
@@ -393,23 +393,24 @@ class App extends React.Component {
                 </Center>
             </FullScreen>
 
-            <IconButton type={MdFingerprint}
-                        className="bottomRight"
-                        onClick={() => this.setTool("reveal")}
-                        color={this.state.activeTool === 'reveal' ? "green" : "white"}/>
+            <div className="bottomLeft">
+                <IconButton type={MdFingerprint}
+                            onClick={() => this.setTool("reveal")}
+                            color={this.state.activeTool === 'reveal' ? "green" : "white"}/>
 
-            <IconButton type={MdFlag}
-                        className="bottomLeft"
-                        onClick={() => this.setTool("flag")}
-                        color={this.state.activeTool === 'flag' ? "green" : "white"}/>
+                <IconButton type={MdFlag}
+                            onClick={() => this.setTool("flag")}
+                            color={this.state.activeTool === 'flag' ? "green" : "white"}/>
+            </div>
 
             <IconButton type={this.state.showNext ? MdArrowForward : MdAutorenew}
-                        className="bottom"
+                        className="bottomRight"
                         onClick={() => this.startNewGame()}
                         color="yellow"/>
 
             <IconButton type={MdMenu}
-                        className="topLeft"
+                        style={{display: "none"}}
+                        className="xtopLeft"
                         color="white"/>
 
             <IconButton type={MdHelpOutline}
